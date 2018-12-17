@@ -1,0 +1,1 @@
+When working on this project, please use the Xcode.workspace in order for cocoa touch pods to work correctly
