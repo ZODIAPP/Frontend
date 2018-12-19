@@ -16,10 +16,11 @@
 		47D632B221C24F1C00395D41 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D632B121C24F1C00395D41 /* secondViewController.swift */; };
 		47D632B421C24F7C00395D41 /* FBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D632B321C24F7C00395D41 /* FBViewController.swift */; };
 		47D632B721C2F7C000395D41 /* phoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D632B621C2F7C000395D41 /* phoneNumberViewController.swift */; };
-		9D4F728FA94B4DCF66604A30 /* Pods_Zodi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67ABBB82317CD81886ADCB47 /* Pods_Zodi.framework */; };
+		C9934223D3C88B4BA04398CE /* Pods_Zodi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91610C5EBF5BCE1C6724C286 /* Pods_Zodi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E999A119E74C8DCBB49D986 /* Pods-Zodi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zodi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zodi/Pods-Zodi.release.xcconfig"; sourceTree = "<group>"; };
 		4776CC8121C765100081A40F /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		47D6329C21C2473000395D41 /* Zodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D6329F21C2473000395D41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,9 +32,8 @@
 		47D632B121C24F1C00395D41 /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		47D632B321C24F7C00395D41 /* FBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBViewController.swift; sourceTree = "<group>"; };
 		47D632B621C2F7C000395D41 /* phoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneNumberViewController.swift; sourceTree = "<group>"; };
-		508DE437518A61FED521B581 /* Pods-Zodi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zodi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zodi/Pods-Zodi.release.xcconfig"; sourceTree = "<group>"; };
-		67ABBB82317CD81886ADCB47 /* Pods_Zodi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zodi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8F592B53F37B8D270A7521B /* Pods-Zodi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zodi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zodi/Pods-Zodi.debug.xcconfig"; sourceTree = "<group>"; };
+		91610C5EBF5BCE1C6724C286 /* Pods_Zodi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zodi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A474AC5FD6FBC25F6A8D18F2 /* Pods-Zodi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zodi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zodi/Pods-Zodi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,20 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D4F728FA94B4DCF66604A30 /* Pods_Zodi.framework in Frameworks */,
+				C9934223D3C88B4BA04398CE /* Pods_Zodi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25F203339BF2EE1EA09B2755 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91610C5EBF5BCE1C6724C286 /* Pods_Zodi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41582BEC1080D09F6905A65B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A474AC5FD6FBC25F6A8D18F2 /* Pods-Zodi.debug.xcconfig */,
+				2E999A119E74C8DCBB49D986 /* Pods-Zodi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		47D6329321C2473000395D41 = {
 			isa = PBXGroup;
 			children = (
 				47D6329E21C2473000395D41 /* Zodi */,
 				47D6329D21C2473000395D41 /* Products */,
-				A127B6B0F48ED8DD7E0C242A /* Pods */,
-				57CCC3473F086F250776D6C0 /* Frameworks */,
+				41582BEC1080D09F6905A65B /* Pods */,
+				25F203339BF2EE1EA09B2755 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,23 +108,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		57CCC3473F086F250776D6C0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				67ABBB82317CD81886ADCB47 /* Pods_Zodi.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A127B6B0F48ED8DD7E0C242A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D8F592B53F37B8D270A7521B /* Pods-Zodi.debug.xcconfig */,
-				508DE437518A61FED521B581 /* Pods-Zodi.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,11 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47D632AE21C2473100395D41 /* Build configuration list for PBXNativeTarget "Zodi" */;
 			buildPhases = (
-				064DC3616A4630A753B70EB8 /* [CP] Check Pods Manifest.lock */,
+				C8B3952C06EF3A2024D4D342 /* [CP] Check Pods Manifest.lock */,
 				47D6329821C2473000395D41 /* Sources */,
 				47D6329921C2473000395D41 /* Frameworks */,
 				47D6329A21C2473000395D41 /* Resources */,
-				0F325E7A572C3744D16C2B37 /* [CP] Embed Pods Frameworks */,
+				8D1FE78BFFADEAC1836DE982 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,29 +177,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		064DC3616A4630A753B70EB8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Zodi-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0F325E7A572C3744D16C2B37 /* [CP] Embed Pods Frameworks */ = {
+		8D1FE78BFFADEAC1836DE982 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,6 +199,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zodi/Pods-Zodi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8B3952C06EF3A2024D4D342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zodi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -379,7 +379,7 @@
 		};
 		47D632AF21C2473100395D41 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8F592B53F37B8D270A7521B /* Pods-Zodi.debug.xcconfig */;
+			baseConfigurationReference = A474AC5FD6FBC25F6A8D18F2 /* Pods-Zodi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -398,7 +398,7 @@
 		};
 		47D632B021C2473100395D41 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 508DE437518A61FED521B581 /* Pods-Zodi.release.xcconfig */;
+			baseConfigurationReference = 2E999A119E74C8DCBB49D986 /* Pods-Zodi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
