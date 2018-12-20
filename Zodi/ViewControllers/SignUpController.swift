@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpController: UIViewController {
+class SignUpController: UIViewController, UITextFieldDelegate {
     //IBOutlets are interface builder outlets which will take the input from the interface and allow the SignUpController object to then send the fields as a request to the server
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
@@ -18,9 +18,22 @@ class SignUpController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        blankFieldError.isHidden = true
         // Do any additional setup after loading the view.
+
+        blankFieldError.isHidden = true
+        //
+        self.nameField.delegate = self;
+        
     }
+    
+    
+    /*
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowChar = CharacterSet.letters
+        let charSet = CharacterSet(charactersIn: string)
+        return allowChar.isSuperset(of: charSet)
+    }
+    */
     
     
     @IBAction func submitBtn_pressed(_ sender: Any) {
@@ -39,13 +52,15 @@ class SignUpController: UIViewController {
             if !email {
                 emailField.layer.borderColor = red.cgColor
                 emailField.layer.borderWidth = 1.0
-
             }
             if !birthdate {
                 birthdateField.layer.borderColor = red.cgColor
                 birthdateField.layer.borderWidth = 1.0
             }
+            return
         }
+        
+        
         
     }
     
@@ -69,6 +84,7 @@ class SignUpController: UIViewController {
     
     func validChecker() {
         //this will be used by the loginHandler to ensure that input is valid so that only valid requests are sent to the server
+        
     }
     
     func loginHandler() {
