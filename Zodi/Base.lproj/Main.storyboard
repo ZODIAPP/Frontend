@@ -111,14 +111,31 @@
                                 <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8F-fA-i3q">
+                                <rect key="frame" x="159" y="386" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitBtn_pressed:" destination="BpE-Hw-p4d" eventType="touchUpInside" id="92j-zg-4jW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Fill in Required Fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4A-da-2KC">
+                                <rect key="frame" x="79" y="357" width="216" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.26519530014739034" blue="0.26633255490708641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.3411764706" green="0.1764705882" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="fd2-Zd-HIC"/>
                     </view>
                     <connections>
                         <outlet property="birthdateField" destination="gld-NZ-MdW" id="lve-bA-Aut"/>
+                        <outlet property="blankFieldError" destination="L4A-da-2KC" id="aXq-TC-VoQ"/>
                         <outlet property="emailField" destination="Wz9-Yv-MsQ" id="q63-gZ-fUO"/>
                         <outlet property="nameField" destination="0yh-9Y-3nO" id="3TX-op-2jk"/>
+                        <outlet property="submitBtn" destination="a8F-fA-i3q" id="z0C-Gl-BB6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie3-c5-95w" userLabel="First Responder" sceneMemberID="firstResponder"/>
