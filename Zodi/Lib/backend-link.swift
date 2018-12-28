@@ -9,15 +9,30 @@
 import Foundation
 import Alamofire
 
+class NSAlert : NSObject {}
+
 class backend_link {
-    static func signUp(_ name: String, _ email: String, _ birthdate: String) {
-        print("Sending Request")
+    static func signUp(_ name: String, _ password: String, _ email: String, _ birthdate: String) {
         let parameters: Parameters = [
-            "username": "Nolan"
+            "username": name,
+            "password": password,
+            "email": email,
+            "birthdate": birthdate
         ]
         
-        AF.request("http://localhost:5000/register", method: .post, parameters: parameters, encoding: URLEncoding.default).response { response in
-                print("Hello!")
-            }
+        var data: NSDictionary = NSDictionary()
+        
+        Alamofire.request("http://localhost:5000/register", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            data = response.result.value as! NSDictionary
+            print("Jesus")
+            print(data)
+            print("Do i get soemthing doei")
+        }
+        print("How fucked?")
+        print(data)
+        print("Okay hello")
+        /*
+        return (data["username"] as! Int, data["password"] as! Int, data["email"] as! Int, data["birthdate"] as! Int)
+        */
     }
 }
