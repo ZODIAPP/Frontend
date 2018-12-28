@@ -22,7 +22,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
 
         blankFieldError.isHidden = true
         //
-        self.nameField.delegate = self;
+        self.nameField.delegate = self
         
     }
     
@@ -47,20 +47,20 @@ class SignUpController: UIViewController, UITextFieldDelegate {
             let red = UIColor.red
             if !name {
                 nameField.layer.borderColor = red.cgColor
-                nameField.layer.borderWidth = 1.0
+                nameField.layer.borderWidth = 1.5
             }
             if !email {
                 emailField.layer.borderColor = red.cgColor
-                emailField.layer.borderWidth = 1.0
+                emailField.layer.borderWidth = 1.5
             }
             if !birthdate {
                 birthdateField.layer.borderColor = red.cgColor
-                birthdateField.layer.borderWidth = 1.0
+                birthdateField.layer.borderWidth = 1.5
             }
             return
         }
         
-        
+        backend_link.signUp("Nolan", "nolanr@yes.com", "08/25/1998")
         
     }
     

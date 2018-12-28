@@ -7,7 +7,7 @@ target 'Zodi' do
 
   # Pods for Zodi
     pod 'SwiftyJSON'
-    pod 'Alamofire'
+    pod 'Alamofire', '~> 5.0.0.beta.1'
 
 
 end
