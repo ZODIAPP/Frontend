@@ -27,7 +27,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    // This is used to inhibit non alpha-numeric values in particular text fields
     /*
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowChar = CharacterSet.letters
@@ -41,15 +41,20 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         let password = passwordField.text!
         let email = emailField.text!
         let birthdate = birthdateField.text!
-        let result = backend_link.signUp(name, password, email, birthdate)
-        /*
-        let user_check: Int = result.0
-        let pass_check: Int = result.1
-        let email_check: Int = result.2
-        let birth_check: Int = result.3
-        
-        print("User: " + String(user_check) + " -- Pass: " + String(pass_check) + " -- Email: " + String(email_check) + " -- Birth: " + String(birth_check))
-        */
+        let validUser = backend_link.evalUser(name, password, email, birthdate)
+        if validUser {
+            print("Success, redirect for registration.")
+            let response = backend_link.regUser(name, password, email, birthdate)
+            if response {
+                print("Successful Registration!")
+            }
+            else {
+                print("Error connecting to server.")
+            }
+        }
+        else {
+            print("Error with user inputs or server connection.")
+        }
         
         //let alert = UIAlertController(title: "Error", message: "Failed to retrieve response from server.", preferredStyle: UIAlertController.Style.alert)
         // self.present(alert, animated: true, completion: nil)
