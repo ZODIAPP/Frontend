@@ -15,6 +15,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var birthdateField: UITextField!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var blankFieldError: UILabel!
+    @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    // This is used to inhibit non alpha-numeric values in particular text fields
     /*
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowChar = CharacterSet.letters
@@ -35,52 +36,35 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     }
     */
     
-    
     @IBAction func submitBtn_pressed(_ sender: Any) {
-        let check = blankChecker()
-        let name = check.0
-        let email = check.1
-        let birthdate = check.2
+        let name = nameField.text!
+        let password = passwordField.text!
+        let email = emailField.text!
+        let birthdate = birthdateField.text!
+        backend_link.evalUser(name, password, email, birthdate, completion: { validUser in
+                if validUser {
+                    print("Success, redirect for registration.")
+                    backend_link.regUser(name, password, email, birthdate, completion: { registered in
+                        if registered {
+                            print("Successful Registration!")
+                        }
+                        else {
+                            print("Error connecting to server.")
+                        }
+                    })
+                }
+                else {
+                    print("Error with user inputs or server connection.")
+                }
+        })
+        /*
+
+ */
         
-        if !name || !email || !birthdate {
-            blankFieldError.isHidden = false
-            let red = UIColor.red
-            if !name {
-                nameField.layer.borderColor = red.cgColor
-                nameField.layer.borderWidth = 1.5
-            }
-            if !email {
-                emailField.layer.borderColor = red.cgColor
-                emailField.layer.borderWidth = 1.5
-            }
-            if !birthdate {
-                birthdateField.layer.borderColor = red.cgColor
-                birthdateField.layer.borderWidth = 1.5
-            }
-            return
-        }
-        
-        backend_link.signUp("Nolan", "nolanr@yes.com", "08/25/1998")
-        
+        //let alert = UIAlertController(title: "Error", message: "Failed to retrieve response from server.", preferredStyle: UIAlertController.Style.alert)
+        // self.present(alert, animated: true, completion: nil)
     }
     
-    func blankChecker() -> (name: Bool, email: Bool, birthdate: Bool){
-        //This will be used in the loginHandler to error check whether or not the user has given input or not so as to assure correct requests to the API
-        var name = true
-        var email = true
-        var birthdate = true
-        if nameField.text == "" {
-            name = false
-        }
-        if emailField.text == "" {
-            email = false
-        }
-        if birthdateField.text == "" {
-            birthdate = false
-        }
-        
-        return (name, email, birthdate)
-    }
     
     func validChecker() {
         //this will be used by the loginHandler to ensure that input is valid so that only valid requests are sent to the server

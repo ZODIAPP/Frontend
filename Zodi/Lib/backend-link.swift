@@ -8,16 +8,73 @@
 
 import Foundation
 import Alamofire
+import UIKit
+
+let firstVc = UIViewController()
+let nextVC = UIViewController()
+
+class NSAlert : NSObject {}
 
 class backend_link {
-    static func signUp(_ name: String, _ email: String, _ birthdate: String) {
-        print("Sending Request")
-        let parameters: Parameters = [
-            "username": "Nolan"
-        ]
+    
+    /* I struggled for three days with asymetric runtimes (Alamofire.request is an asymetric method which essentially means the rest of your code will run before it is done, which inhibits a .post request from evaluating if a user has submitted proper data and then creating the user in the same method. THEREFORE, I have created two methods: evalUser() which evaluates if the user has provided proper strings for each of the textfields, and regUser() which registers the user if all information abides by the backend, and conversely if the user provides faulty information.
+ 
+     */
+    
+    static func evalUser(_ name: String, _ password: String, _ email: String, _ birthdate: String, completion: @escaping (Bool) -> ()) -> Void {
+        var goodRequest = false
         
-        AF.request("http://localhost:5000/register", method: .post, parameters: parameters, encoding: URLEncoding.default).response { response in
-                print("Hello!")
+        let parameters: Parameters = [
+            "username": name,
+            "password": password,
+            "email": email,
+            "birthdate": birthdate,
+        ]
+
+        Alamofire.request("http://localhost:5000/register", method: .get, parameters: parameters).responseString { (response) -> Void in
+            if let userAuth = response.result.value {
+                if userAuth == "true" {
+                    goodRequest = true
+                }
             }
+            else {
+                print("Error connecting with server.")
+            }
+            
+            if goodRequest {
+                completion(true)
+            }
+            else {
+                completion(false)
+            }
+        }
+    }
+    
+    static func regUser(_ name: String, _ password: String, _ email: String, _ birthdate: String, completion: @escaping (_ registered: Bool) -> ()) -> Void {
+        
+        var serverResponse = false
+        
+        let parameters: Parameters = [
+            "username": name,
+            "password": password,
+            "email": email,
+            "birthdate": birthdate,
+            ]
+        
+        Alamofire.request("http://localhost:5000/register", method: .post, parameters: parameters).responseString { (response) -> Void in
+            if response.result.value != nil {
+                serverResponse = true
+            }
+            if serverResponse {
+                completion(true)
+            }
+            else {
+                completion(false)
+            }
+        }
+        
+
     }
 }
+
+
