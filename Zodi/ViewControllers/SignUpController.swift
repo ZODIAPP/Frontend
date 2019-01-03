@@ -41,20 +41,25 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         let password = passwordField.text!
         let email = emailField.text!
         let birthdate = birthdateField.text!
-        let validUser = backend_link.evalUser(name, password, email, birthdate)
-        if validUser {
-            print("Success, redirect for registration.")
-            let response = backend_link.regUser(name, password, email, birthdate)
-            if response {
-                print("Successful Registration!")
-            }
-            else {
-                print("Error connecting to server.")
-            }
-        }
-        else {
-            print("Error with user inputs or server connection.")
-        }
+        backend_link.evalUser(name, password, email, birthdate, completion: { validUser in
+                if validUser {
+                    print("Success, redirect for registration.")
+                    backend_link.regUser(name, password, email, birthdate, completion: { registered in
+                        if registered {
+                            print("Successful Registration!")
+                        }
+                        else {
+                            print("Error connecting to server.")
+                        }
+                    })
+                }
+                else {
+                    print("Error with user inputs or server connection.")
+                }
+        })
+        /*
+
+ */
         
         //let alert = UIAlertController(title: "Error", message: "Failed to retrieve response from server.", preferredStyle: UIAlertController.Style.alert)
         // self.present(alert, animated: true, completion: nil)
