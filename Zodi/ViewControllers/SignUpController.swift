@@ -47,6 +47,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
                     backend_link.regUser(name, password, email, birthdate, completion: { registered in
                         if registered {
                             print("Successful Registration!")
+                            // self.performSegue(withIdentifier: "getLocation", sender: self)
                         }
                         else {
                             print("Error connecting to server.")
@@ -57,32 +58,20 @@ class SignUpController: UIViewController, UITextFieldDelegate {
                     print("Error with user inputs or server connection.")
                 }
         })
-        /*
 
- */
-        
-        //let alert = UIAlertController(title: "Error", message: "Failed to retrieve response from server.", preferredStyle: UIAlertController.Style.alert)
-        // self.present(alert, animated: true, completion: nil)
-    }
-    
-    
-    func validChecker() {
-        //this will be used by the loginHandler to ensure that input is valid so that only valid requests are sent to the server
-        
-    }
-    
-    func loginHandler() {
-        //This will take the input from the IBOutlets and make requests to the RESTful api using Alamofire (probably)
     }
 
+    // Linking location page
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "getLocation" {
+            if let locationVC = segue.destination as? locationConfig {
+                print(locationVC)
+            }
+        }
     }
-    */
-
+     */
+    
 }
+
+

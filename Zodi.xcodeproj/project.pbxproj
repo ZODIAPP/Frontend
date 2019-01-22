@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4776CC8221C765100081A40F /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4776CC8121C765100081A40F /* SignUpController.swift */; };
 		47D632A021C2473000395D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D6329F21C2473000395D41 /* AppDelegate.swift */; };
-		47D632A221C2473000395D41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D632A121C2473000395D41 /* ViewController.swift */; };
+		47D632A221C2473000395D41 /* locationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D632A121C2473000395D41 /* locationConfig.swift */; };
 		47D632A521C2473000395D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D632A321C2473000395D41 /* Main.storyboard */; };
 		47D632A721C2473100395D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D632A621C2473100395D41 /* Assets.xcassets */; };
 		47D632AA21C2473100395D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D632A821C2473100395D41 /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		4776CC8121C765100081A40F /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		47D6329C21C2473000395D41 /* Zodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D6329F21C2473000395D41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47D632A121C2473000395D41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47D632A121C2473000395D41 /* locationConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationConfig.swift; sourceTree = "<group>"; };
 		47D632A421C2473000395D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47D632A621C2473100395D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47D632A921C2473100395D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				4776CC8121C765100081A40F /* SignUpController.swift */,
-				47D632A121C2473000395D41 /* ViewController.swift */,
+				47D632A121C2473000395D41 /* locationConfig.swift */,
 				47D632B121C24F1C00395D41 /* secondViewController.swift */,
 				47D632B621C2F7C000395D41 /* phoneNumberViewController.swift */,
 				47D632B321C24F7C00395D41 /* FBViewController.swift */,
@@ -243,7 +243,7 @@
 			files = (
 				47D632B721C2F7C000395D41 /* phoneNumberViewController.swift in Sources */,
 				47D632B421C24F7C00395D41 /* FBViewController.swift in Sources */,
-				47D632A221C2473000395D41 /* ViewController.swift in Sources */,
+				47D632A221C2473000395D41 /* locationConfig.swift in Sources */,
 				47D632B221C24F1C00395D41 /* secondViewController.swift in Sources */,
 				47D632A021C2473000395D41 /* AppDelegate.swift in Sources */,
 				4776CC8221C765100081A40F /* SignUpController.swift in Sources */,
