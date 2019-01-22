@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mac OS X
 .DS_Store
 
@@ -9,3 +10,6 @@
 *.moved-aside
 *.xcuserstate
 *.xcscmblueprint
+=======
+.DS_Store
+>>>>>>> master
