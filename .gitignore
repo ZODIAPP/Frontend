@@ -1,1 +1,15 @@
+<<<<<<< HEAD
+# Mac OS X
 .DS_Store
+
+# Swift Package Manager
+.build/
+
+# Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+=======
+.DS_Store
+>>>>>>> master
