@@ -16,7 +16,6 @@ class phoneNumberViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        phoneLabel.text = passedNumber
     }
     
 

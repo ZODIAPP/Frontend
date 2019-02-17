@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4776CC8221C765100081A40F /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4776CC8121C765100081A40F /* SignUpController.swift */; };
 		47D632A021C2473000395D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D6329F21C2473000395D41 /* AppDelegate.swift */; };
-		47D632A221C2473000395D41 /* locationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D632A121C2473000395D41 /* locationConfig.swift */; };
 		47D632A521C2473000395D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D632A321C2473000395D41 /* Main.storyboard */; };
 		47D632A721C2473100395D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D632A621C2473100395D41 /* Assets.xcassets */; };
 		47D632AA21C2473100395D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D632A821C2473100395D41 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,9 @@
 		47D632B421C24F7C00395D41 /* FBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D632B321C24F7C00395D41 /* FBViewController.swift */; };
 		47D632B721C2F7C000395D41 /* phoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D632B621C2F7C000395D41 /* phoneNumberViewController.swift */; };
 		C9934223D3C88B4BA04398CE /* Pods_Zodi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91610C5EBF5BCE1C6724C286 /* Pods_Zodi.framework */; };
+		DF2ADE59220FE41000524FCA /* verificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ADE58220FE41000524FCA /* verificationCodeViewController.swift */; };
+		DF2ADE5B220FE58500524FCA /* phoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2ADE5A220FE58500524FCA /* phoneAuthViewController.swift */; };
+		DF2ADE5D220FF1E800524FCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF2ADE5C220FF1E800524FCA /* GoogleService-Info.plist */; };
 		DF37889821CB4B3900808270 /* backend-link.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37889721CB4B3900808270 /* backend-link.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +27,6 @@
 		4776CC8121C765100081A40F /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		47D6329C21C2473000395D41 /* Zodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D6329F21C2473000395D41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47D632A121C2473000395D41 /* locationConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationConfig.swift; sourceTree = "<group>"; };
 		47D632A421C2473000395D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47D632A621C2473100395D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47D632A921C2473100395D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +36,10 @@
 		47D632B621C2F7C000395D41 /* phoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneNumberViewController.swift; sourceTree = "<group>"; };
 		91610C5EBF5BCE1C6724C286 /* Pods_Zodi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zodi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A474AC5FD6FBC25F6A8D18F2 /* Pods-Zodi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zodi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zodi/Pods-Zodi.debug.xcconfig"; sourceTree = "<group>"; };
+		DF2ADE57220FDC7A00524FCA /* Zodi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zodi.entitlements; sourceTree = "<group>"; };
+		DF2ADE58220FE41000524FCA /* verificationCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verificationCodeViewController.swift; sourceTree = "<group>"; };
+		DF2ADE5A220FE58500524FCA /* phoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneAuthViewController.swift; sourceTree = "<group>"; };
+		DF2ADE5C220FF1E800524FCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF37889721CB4B3900808270 /* backend-link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "backend-link.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,10 +93,12 @@
 		47D6329E21C2473000395D41 /* Zodi */ = {
 			isa = PBXGroup;
 			children = (
+				DF2ADE57220FDC7A00524FCA /* Zodi.entitlements */,
 				DF37889621CB4AB400808270 /* Lib */,
 				47D632B521C2F77B00395D41 /* ViewControllers */,
 				47D6329F21C2473000395D41 /* AppDelegate.swift */,
 				47D632A321C2473000395D41 /* Main.storyboard */,
+				DF2ADE5C220FF1E800524FCA /* GoogleService-Info.plist */,
 				47D632A621C2473100395D41 /* Assets.xcassets */,
 				47D632A821C2473100395D41 /* LaunchScreen.storyboard */,
 				47D632AB21C2473100395D41 /* Info.plist */,
@@ -102,11 +109,12 @@
 		47D632B521C2F77B00395D41 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DF2ADE5A220FE58500524FCA /* phoneAuthViewController.swift */,
 				4776CC8121C765100081A40F /* SignUpController.swift */,
-				47D632A121C2473000395D41 /* locationConfig.swift */,
 				47D632B121C24F1C00395D41 /* secondViewController.swift */,
 				47D632B621C2F7C000395D41 /* phoneNumberViewController.swift */,
 				47D632B321C24F7C00395D41 /* FBViewController.swift */,
+				DF2ADE58220FE41000524FCA /* verificationCodeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -153,6 +161,14 @@
 				TargetAttributes = {
 					47D6329B21C2473000395D41 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -180,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D632AA21C2473100395D41 /* LaunchScreen.storyboard in Resources */,
+				DF2ADE5D220FF1E800524FCA /* GoogleService-Info.plist in Resources */,
 				47D632A721C2473100395D41 /* Assets.xcassets in Resources */,
 				47D632A521C2473000395D41 /* Main.storyboard in Resources */,
 			);
@@ -198,14 +215,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Zodi/Pods-Zodi-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -243,8 +266,9 @@
 			files = (
 				47D632B721C2F7C000395D41 /* phoneNumberViewController.swift in Sources */,
 				47D632B421C24F7C00395D41 /* FBViewController.swift in Sources */,
-				47D632A221C2473000395D41 /* locationConfig.swift in Sources */,
 				47D632B221C24F1C00395D41 /* secondViewController.swift in Sources */,
+				DF2ADE5B220FE58500524FCA /* phoneAuthViewController.swift in Sources */,
+				DF2ADE59220FE41000524FCA /* verificationCodeViewController.swift in Sources */,
 				47D632A021C2473000395D41 /* AppDelegate.swift in Sources */,
 				4776CC8221C765100081A40F /* SignUpController.swift in Sources */,
 				DF37889821CB4B3900808270 /* backend-link.swift in Sources */,
@@ -394,6 +418,7 @@
 			baseConfigurationReference = A474AC5FD6FBC25F6A8D18F2 /* Pods-Zodi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Zodi/Zodi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27DHR6XK2F;
@@ -415,6 +440,7 @@
 			baseConfigurationReference = 2E999A119E74C8DCBB49D986 /* Pods-Zodi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Zodi/Zodi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27DHR6XK2F;

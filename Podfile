@@ -8,6 +8,8 @@ target 'Zodi' do
   # Pods for Zodi
     pod 'SwiftyJSON'
     pod 'Alamofire'
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
 
 
 end
